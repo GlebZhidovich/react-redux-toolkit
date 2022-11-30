@@ -23,11 +23,17 @@ const postsSlice = createSlice({
         };
       },
     },
+    postRemoved: {
+      reducer(state, action) {
+        const index = state.findIndex((p) => p.id == action.payload);
+        state.splice(index, 1);
+      },
+    },
   },
 });
 
 export const selectAllPosts = (state) => state.posts;
 
-export const { postAdded } = postsSlice.actions;
+export const { postAdded, postRemoved } = postsSlice.actions;
 
 export default postsSlice.reducer;
