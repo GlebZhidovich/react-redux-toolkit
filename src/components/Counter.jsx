@@ -5,7 +5,6 @@ import {
   incrementAmount,
   reset,
 } from "../store/features/counter/counterSlice";
-import styles from "./Counter.module.scss";
 
 const Counter = () => {
   const count = useSelector((state) => state.counter.count);
@@ -13,7 +12,7 @@ const Counter = () => {
   return (
     <section>
       <p>{count}</p>
-      <div className={styles.controls}>
+      <div>
         <button onClick={() => dispatch(increment())}>+</button>
         <button onClick={() => dispatch(decrement())}>-</button>
         <button onClick={() => dispatch(incrementAmount(20))}>+20</button>

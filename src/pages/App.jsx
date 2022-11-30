@@ -1,12 +1,10 @@
-import Counter from "../components/Counter";
-
-import "./App.scss";
+import PostsList from "../components/PostsList";
 
 function App() {
   return (
-    <div className="App">
-      <Counter />
-    </div>
+    <main>
+      <PostsList />
+    </main>
   );
 }
 
